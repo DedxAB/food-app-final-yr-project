@@ -6,7 +6,7 @@ export default function Home() {
       <h1 className="text-4xl font-bold text-center">
         Welcome to <a href="https://nextjs.org">Next.js!</a>
       </h1>
-      <Button className="my-4">new button</Button>
+      <Button className="my-4">Button</Button>
     </main>
   )
 }
