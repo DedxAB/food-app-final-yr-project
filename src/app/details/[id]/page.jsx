@@ -22,12 +22,12 @@ const DetailsPage = () => {
     setCount(count - 1);
   };
   return (
-    <main className="relative h-[87vh] p-5">
+    <main className="relative h-[95vh] p-5">
       <div className="w-full h-full">
         <div className="flex items-center justify-between mb-5">
           <Link href="/">
             <Button variant="ghost" size="icon">
-              <MoveLeft className="w-4" />
+              <MoveLeft className="w-5" />
             </Button>
           </Link>
           <Button size="icon">
@@ -42,7 +42,7 @@ const DetailsPage = () => {
           />
         </div>
 
-        <div className="flex gap-3 flex-col my-5">
+        <div className="flex gap-5 flex-col my-7">
           <div className="flex items-center justify-between">
             <h1 className="text-3xl font-bold">Name</h1>
             <div className="flex items-center justify-center text-base">
@@ -71,7 +71,7 @@ const DetailsPage = () => {
             <Clock className="w-4 mr-1" />
             <span className="font-bold text-lg ml-1">30 min</span>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between mt-2">
             <div className="flex flex-col">
               <span className="font-bold text-sm text-slate-800">
                 Total Price
@@ -79,7 +79,7 @@ const DetailsPage = () => {
               <span className="font-bold text-base">{count * 178.5}</span>
             </div>
             <div>
-              <Button disabled={count < 1}>
+              <Button disabled={count < 1} className="h-11">
                 Add to cart <ShoppingCart className="w-4 ml-3" />
               </Button>
             </div>
