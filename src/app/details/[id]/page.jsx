@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+
 const DetailsPage = () => {
   const [count, setCount] = useState(0);
   const handelCountPlus = () => {
