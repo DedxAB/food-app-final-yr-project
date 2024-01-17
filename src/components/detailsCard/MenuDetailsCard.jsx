@@ -13,6 +13,15 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
 const MenuDetailsCard = () => {
   const [count, setCount] = useState(0);
 
@@ -46,6 +55,24 @@ const MenuDetailsCard = () => {
               {/* Price  */}
               <p className="text-lg font-bold">Rs.78.00</p>
             </div>
+            <div>
+              {/* descripton  */}
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="outline" className="mt-1">Menu</Button>
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>Todays menu</DialogTitle>
+                    <DialogDescription>
+                      Chicken
+                      <br />
+                      Fish
+                    </DialogDescription>
+                  </DialogHeader>
+                </DialogContent>
+              </Dialog>
+            </div>
           </div>
           <div>
             <Button variant="outline" size="icon">
@@ -58,7 +85,7 @@ const MenuDetailsCard = () => {
             {/* subcription  */}
             <Select>
               <SelectTrigger className="w-[120px]">
-                <SelectValue placeholder="Subcription" />
+                <SelectValue placeholder="Subscribe" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="nothing">Nothing</SelectItem>
@@ -66,7 +93,23 @@ const MenuDetailsCard = () => {
                 <SelectItem value="weekly">Weekly</SelectItem>
               </SelectContent>
             </Select>
-            <div className="mr-10"></div>
+            <div className="mr-10 ml-1 pt-2">
+              <Dialog>
+                <DialogTrigger>
+                  {/* See more */}
+                  <AlertCircle />
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>What is subscription?</DialogTitle>
+                    <DialogDescription>
+                      Subscription is a recurring order. You can choose to
+                      receive your order weekly or monthly.
+                    </DialogDescription>
+                  </DialogHeader>
+                </DialogContent>
+              </Dialog>
+            </div>
           </div>
           <div>
             {/* + Add - Remove */}
