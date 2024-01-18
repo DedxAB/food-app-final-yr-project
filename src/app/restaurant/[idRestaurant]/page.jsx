@@ -48,7 +48,7 @@ const DetailsPage = () => {
       </div>
 
       {/* resturant menu  */}
-      <div className="mb-16 p-5">
+      <div className="mb-16 p-5 shadow-md mt-5">
         <MenuDetailsCard />
         <MenuDetailsCard />
         <MenuDetailsCard />
