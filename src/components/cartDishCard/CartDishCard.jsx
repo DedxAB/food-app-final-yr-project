@@ -22,7 +22,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-const MenuDetailsCard = () => {
+const CartDishCard = () => {
   const [count, setCount] = useState(0);
 
   const handleCountPlus = () => {
@@ -50,11 +50,11 @@ const MenuDetailsCard = () => {
             <div className="flex flex-col ">
               <div>
                 {/* name  */}
-                <h1 className="text-lg font-bold">Fruit salad mix</h1>
+                <h1 className="text-base font-bold">Fruit salad mix</h1>
               </div>
               <div>
                 {/* Price  */}
-                <p className="text-lg font-bold">Rs.78.00</p>
+                <p className="text-base font-bold">Rs.78.00</p>
               </div>
               <div>
                 {/* descripton  */}
@@ -133,4 +133,4 @@ const MenuDetailsCard = () => {
   );
 };
 
-export default MenuDetailsCard;
+export default CartDishCard;
