@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import DetailsImg from "../../../../public/assets/details.jpeg";
-import { Heart, MapPin, MoveLeft, ShoppingCart } from "lucide-react";
+import { Heart, MapPin, MoveLeft } from "lucide-react";
 import Link from "next/link";
 import MenuDetailsCard from "@/components/detailsCard/MenuDetailsCard";
 
