@@ -3,7 +3,7 @@ import Image from "next/image";
 import DetailsImg from "../../../../public/assets/details.jpeg";
 import { Heart, MapPin, MoveLeft } from "lucide-react";
 import Link from "next/link";
-import MenuDetailsCard from "@/components/detailsCard/MenuDetailsCard";
+import MenuDetailsCard from "@/components/MealDetailsCard/MenuDetailsCard";
 
 const DetailsPage = () => {
   return (
