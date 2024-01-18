@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Menu, ShoppingCart } from "lucide-react";
+import Navbar from "../app/navbar/page"
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold">Hello World</h1>
       </div>
       <div>
+        <Navbar/>
       </div>
     </main>
   );

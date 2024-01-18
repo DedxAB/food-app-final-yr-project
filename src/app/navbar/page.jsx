@@ -20,7 +20,7 @@ import {
 const page = () => {
     return (
         <div>
-            <footer className="bg-gray-800 p-4 m-1  rounded-lg  fixed bottom-0 w-full mx-auto ">
+            <footer className="bg-red-500 p-4 m-1  rounded-lg  fixed bottom-0 w-[90%] mx-auto ">
                 <div className="container mx-auto">
 
                     <div className="flex  justify-between items-center space-x-4">
@@ -57,16 +57,6 @@ const page = () => {
                             </Sheet>
 
                         </div>
-
-
-                        {/* <div>
-                            <Avatar>
-                                <AvatarImage src="https://github.com/shadcn.png"/>
-                
-                                <AvatarFallback><a href="/"></a></AvatarFallback>
-                            </Avatar>
-                        </div> */}
-
                     </div>
                 </div>
             </footer>   

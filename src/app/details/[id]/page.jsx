@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import DetailsImg from "../../../../public/assets/details.jpeg";
 import { MapPinned } from "lucide-react"
-import Menupage from "../../../components/menucards/Menu"
+import Menupage from "../../../components/menucards/Menu";
+import Navbar from "../../navbar/page"
 import {
   Clock,
   Heart,
@@ -18,7 +19,7 @@ import Link from "next/link";
 const DetailsPage = () => {
 
   return (
-    <main className="relative  p-5">
+    <main className="relative  p-5 ">
 
       <div className="flex justify-between items-center">
         <Link rel="stylesheet" href="/">
@@ -38,7 +39,7 @@ const DetailsPage = () => {
         />
       </div>
       {/* resturant address  */}
-      <div className="w-full h-[31vh] relative">
+      <div className="w-full   h-[31vh] relative ">
         <div className="absolute bottom-0 w-full h-[23vh] bg-white bg-opacity-70 backdrop-filter backdrop-blur-md shadow-md rounded-md py-8">
           <div className="flex justify-center items-center gap-1 flex-col">
             <h1 className="text-xl font-bold">Aii Khaya Ja</h1>
@@ -53,12 +54,14 @@ const DetailsPage = () => {
             <span className="font-bold ml-2">1.5 km</span>
           </div>
         </div>
-
       </div>
-
-      <Menupage />
-
-
+      {/* menu  */}
+      <div className="">
+        <Menupage />
+        <Menupage />
+        <Menupage />
+        <Menupage />
+      </div>
     </main>
   );
 };
