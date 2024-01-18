@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div  className="max-w-3xl mx-auto pt-5">{children}</div>
+        <div  className="max-w-3xl mx-auto pt-5 ">{children}</div>
       </body>
     </html>
   );
