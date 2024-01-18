@@ -57,7 +57,7 @@ const DetailsPage = () => {
       </div>
 
       {/* Navbar bottom */}
-      <div className="flex items-center justify-between bg-red-600 text-white shadow-md py-2 px-5 fixed bottom-0 right-0 w-full max-w-3x mx-auto">
+      <div className="flex items-center justify-between bg-red-600 text-white shadow-md py-2 px-5 fixed bottom-0 right-0 w-full mx-auto">
         <div className="flex flex-col">
           <span className="font-bold text-sm">Total Price</span>
           <span className="font-bold text-base">Rs. {178.5}</span>
