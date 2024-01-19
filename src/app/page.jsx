@@ -3,17 +3,26 @@ import { Menu, ShoppingCart } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="relative h-[87vh] p-5">
-      <div className="flex justify-between items-center">
-        <Menu className="cursor-pointer"/>
-        <Button variant="" size="icon" className="w-10">
-          <ShoppingCart className="h-4 w-4" />
-        </Button>
-      </div>
+    
+    <div className="hero min-h-screen relative flex items-center justify-center">
 
-      <div className="absolute bottom-0 left-0 mt-4 text-center p-5">
-        <h1 className="text-4xl font-bold">Hello World</h1>
+      <div className="absolute inset-0 bg-cover bg-blur" style={{ backgroundImage: 'url(/assets/details.jpeg)' }}></div>
+
+      <div className="absolute  w-[65vh] h-[40vh] bg-white bg-opacity-50 backdrop-filter backdrop-blur-md shadow-md rounded-xl py-8">
+
+      <div className="hero-overlay bg-opacity-60">
+
+      <div className="hero-content text-center text-neutral-content relative z-10">
+        <div className="max-w-md mx-auto">
+          <h1 className="mb-5 text-5xl font-bold text-black">Hello there</h1>
+          <p className="mb-5 text-black">
+            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
+          </p>
+          <Button>Get Started</Button>
+        </div>
       </div>
-    </main>
+    </div>
+    </div>
+      </div>
   );
 }
