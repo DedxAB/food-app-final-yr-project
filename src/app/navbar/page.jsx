@@ -1,5 +1,6 @@
-import { Home, BaggageClaim, MessageCircle, User, Database } from 'lucide-react'
+import { Home, BaggageClaim, MessageCircle, User, MapPinned,ShoppingBag,Contact,Settings} from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import Link from 'next/link'
 import {
     Carousel,
     CarouselContent,
@@ -20,37 +21,46 @@ import {
 const page = () => {
     return (
         <div>
-            <footer className="bg-red-500 p-4 m-1  rounded-lg  fixed bottom-0 w-[90%] mx-auto ">
+            <footer className="bg-slate-900 p-4 m-1  rounded-lg  fixed bottom-0 w-full max-w-3xl ">
                 <div className="container mx-auto">
 
                     <div className="flex  justify-between items-center space-x-4">
-                        <a href="/">
+                        <Link href="/">
                             <Home color="#ffffff" strokeWidth={1.75} />
-                        </a>
-                        <a href="">
+                        </Link>
+                        <Link href="/cart">
                             <BaggageClaim color="#ffffff" strokeWidth={1.75} />
-                        </a>
-                        <a href="">
+                        </Link>
+                        <Link href="">
                             <MessageCircle color="#ffffff" strokeWidth={1.75} />
-                        </a>
-                        <div>
+                        </Link>
+                        <div >
                             <Sheet>
                                 <SheetTrigger><User color="#ffffff" strokeWidth={1.75} /></SheetTrigger>
-                                <SheetContent className="bg-orange-200 ">
-                                    <SheetHeader className="">
-                                        <SheetTitle>Hi Foodi</SheetTitle>
+                                <SheetContent className="bg-slate-100 ">
+                                    <SheetHeader className=''>
+                                        <SheetTitle>Hi ,<span className='font-bold px-2 text-base'>Arnab</span></SheetTitle>
                                         <SheetDescription>
-                                            <div>
-                                                <ul className='list-outside  ju'>
-                                                    <li><a href="/"><Database color="#000000" strokeWidth={1.75} />My Order</a></li>
-                                                    <li>My Profile</li>
-                                                    <li>Delivery Address</li>
-                                                    <li>Payment Methods</li>
-                                                    <li>Contact Us</li>
-                                                    <li>Setting</li>
-                                                </ul>
+                                            <div className='flex items-start flex-col justify-normal pt-11 gap-3 mx-5'>
+                                                <Link href="#" className='flex '>
+                                                    <User color="#ff0000" strokeWidth={1.25} />
+                                                    <span className="font-bold ml-2">My Profile</span>
+                                                </Link>
+                                                <Link href="#" className='flex '>
+                                                    <ShoppingBag color="#ff0000" strokeWidth={1.25} />
+                                                    <span className="font-bold ml-2">My Order</span>
+                                                </Link>
+                                                <Link href="#" className='flex '>
+                                                    <MapPinned  color="#ff0000" strokeWidth={1.25} />
+                                                    <span className="font-bold ml-2">Delivery Adress</span>
+                                                </Link>
+                                                <Link href="#" className='flex '>
+                                                <Contact  color="#ff0000" strokeWidth={1.25} />
+                                                    <span className="font-bold ml-2">Contact Us</span>
+                                                </Link>
 
                                             </div>
+
                                         </SheetDescription>
                                     </SheetHeader>
                                 </SheetContent>
@@ -59,7 +69,7 @@ const page = () => {
                         </div>
                     </div>
                 </div>
-            </footer>   
+            </footer>
         </div>
 
     )
