@@ -4,7 +4,7 @@ import Image from "next/image";
 import DetailsImg from "../../../../public/assets/details.jpeg";
 import { MapPinned } from "lucide-react"
 import Menupage from "../../../components/menucards/Menu";
-import Navbar from "../../navbar/page"
+import Navbar from "../../home/page"
 import Link from "next/link";
 import {
   Clock,
@@ -27,7 +27,7 @@ const DetailsPage = () => {
             <MoveLeft className="w-5" />
           </Button>
         </Link>
-        <Button size="icon">
+        <Button variant='piyas' size="icon">
           <Heart className="w-4" />
         </Button>
       </div>
@@ -42,8 +42,8 @@ const DetailsPage = () => {
       <div className="w-full   h-[31vh] relative ">
         <div className="absolute bottom-0 w-full h-[23vh] bg-white bg-opacity-70 backdrop-filter backdrop-blur-md shadow-md rounded-md py-8">
           <div className="flex justify-center items-center gap-1 flex-col">
-            <h1 className="text-xl font-bold">Aii Khaya Ja</h1>
-            <p className="text-lg text-gray-500">Duckbanglo more ,City mall</p>
+            <h1 className="text-xl font-bold">DAK BUNGALOW BIRYANI </h1>
+            <p className="text-lg text-gray-500">Indraprastha,Hridaypur,Dakbanglow</p>
           </div>
           <div className="flex justify-center items-center">
             <span className="font-bold"> Open </span>
@@ -62,7 +62,7 @@ const DetailsPage = () => {
         <Menupage foodname="Veggie Pizza" price="Rs . 250. 00" />
       </div>
       {/* Navbar bottom  */}
-      <div className="flex items-center justify-between bg-red-600 py-2 px-5 bg-opacity-15 backdrop-filter  backdrop-blur-sm   w-full  max-w-3xl fixed bottom-0  shadow-md rounded-md">
+      <div className="flex items-center justify-between bg-red-600 py-2 px-5 bg-opacity-40 backdrop-filter  backdrop-blur-sm   w-full  max-w-3xl fixed bottom-0  shadow-md rounded-md">
         <div className="flex flex-col">
           <span className=" font-bold text-sm">Total Price</span>
           <span className="font-bold text-base">Rs.{154.5}</span>
@@ -70,7 +70,7 @@ const DetailsPage = () => {
         {/* Add to cart */}
         <div>
           <Link rel="stylesheet" href="/cart">
-            <Button variant="secondary" className="h-11">
+            <Button variant="piyas" className="h-11 text-white">
               Go to cart <ShoppingCart className="w-5 ml-2" />
             </Button>
           </Link>

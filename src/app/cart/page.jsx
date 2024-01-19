@@ -37,8 +37,8 @@ const page = () => {
 
 
                 {/* Total Bill */}
-                <div className='flex items-center justify-between bg-red-600 py-2 px-5 bg-opacity-15 backdrop-filter  backdrop-blur-sm  max-w-3xl w-full fixed bottom-0  shadow-md rounded-md'>
-                    <div className='flex flex-col'>
+                <div className='flex items-center justify-between bg-red-600 py-2 px-5 bg-opacity-40 backdrop-filter  backdrop-blur-sm  max-w-3xl w-full fixed bottom-0  shadow-md rounded-md'>
+                    <div className='flex flex-col '>
                         <span className='font-bold text-sm'>Total Bill</span>
                         <span className='font-bold text-base'>Rs. {564.4}</span>
                     </div>

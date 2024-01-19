@@ -78,8 +78,8 @@ const menucards = (props) => {
                         </div>
                     </div>
                     <div>
-                        <Button variant='outline' size='icon'>
-                            <Heart size={28} strokeWidth={1.75} />
+                        <Button variant='piyas' size='icon'>
+                            <Heart size={24} strokeWidth={1.75} className='text-white' />
                         </Button>
                     </div>
                 </div>
@@ -122,8 +122,8 @@ const menucards = (props) => {
                         <Minus />
                         </Button>
                         <span className='mx-2'>{Count}</span>
-                        <Button size="icon" onClick={handleCountPlus}>
-                        <Plus/>
+                        <Button variant='piyas' size="icon" onClick={handleCountPlus}>
+                        <Plus className='text-white'/>
                         </Button>
 
                        </div>

@@ -21,7 +21,7 @@ import {
 const page = () => {
     return (
         <div>
-            <footer className="bg-slate-900 p-4 m-1  rounded-lg  fixed bottom-0 w-full max-w-3xl ">
+            <footer className="bg-slate-900 p-4 m-1  rounded-lg  fixed bottom-0 w-full max-w-3xl  max-width: 45vh ">
                 <div className="container mx-auto">
 
                     <div className="flex  justify-between items-center space-x-4">
@@ -58,6 +58,7 @@ const page = () => {
                                                 <Contact  color="#ff0000" strokeWidth={1.25} />
                                                     <span className="font-bold ml-2">Contact Us</span>
                                                 </Link>
+                                                
 
                                             </div>
 

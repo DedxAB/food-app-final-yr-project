@@ -38,7 +38,7 @@ const LoginPage = () => {
             </form>
           </CardContent>
           <CardFooter className="flex justify-between">
-            <Button variant="myLoginBtn">
+            <Button >
               <LogIn className="w-[0.88rem] mr-2"/>
               Log in
             </Button>
