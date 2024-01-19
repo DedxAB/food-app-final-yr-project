@@ -57,10 +57,23 @@ const DetailsPage = () => {
       </div>
       {/* menu  */}
       <div className="">
-        <Menupage />
-        <Menupage />
-        <Menupage />
-        <Menupage />
+        <Menupage foodname="Pizza 55" price="Rs . 300. 00" />
+        <Menupage foodname="BBQ Pizza" price="Rs . 520. 00" />
+        <Menupage foodname="Veggie Pizza" price="Rs . 250. 00" />
+      </div>
+      {/* Navbar bottom */}
+      <div className="flex items-center justify-between bg-red-600 text-white shadow-md py-2 px-3 fixed bottom-0 right-0 w-full mx-aut">
+      <div className="flex flex-col">
+         <span className=" font-bold text-sm">Total Price</span>
+         <span className="font-bold text-base">Rs.{154.5}</span>
+      </div>
+      {/* Add to cart */}
+      <div>
+        <Button variant="secondary" className="h-11">
+        Go to cart <ShoppingCart className="w-5 ml-2" />
+        </Button>
+      </div>
+
       </div>
     </main>
   );

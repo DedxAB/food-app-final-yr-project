@@ -25,7 +25,7 @@ import {
 
 
 
-const menucards = () => {
+const menucards = (props) => {
   
     const [Count ,setCount]=useState(0);
 
@@ -52,11 +52,11 @@ const menucards = () => {
                     <div className='flex flex-col gap-1'>
                         {/* name  */}
                         <div>
-                            <h1 className='text-lg font-bold'>Pizza 99</h1>
+                            <h1 className='text-lg font-bold'>{props.foodname}</h1>
                         </div>
                         <div>
                             {/* price */}
-                            <p className='text-lg font-bold'>Rs.80</p>
+                            <p className='text-lg font-bold'>{props.price}</p>
                         </div>
                         <div>
                             {/* descripton  */}
