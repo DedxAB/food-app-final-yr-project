@@ -1,4 +1,5 @@
 import CartDishCard from "@/components/cartDishCard/CartDishCard";
+import NavbarCard from "@/components/navbarCard/NavbarCard";
 import { Button } from "@/components/ui/button";
 import { Clock4, Heart, MoveLeft, ShoppingBag } from "lucide-react";
 import Link from "next/link";
@@ -49,16 +50,9 @@ const CartPage = () => {
         </div>
       </div>
 
-      {/* total bill  */}
-      <div className="flex items-center justify-between py-2 px-5 rounded bg-white bg-opacity-20 backdrop-filter backdrop-blur-md fixed max-w-3xl w-full bottom-0 shadow-md">
-        <div className="flex flex-col">
-          <span className="font-bold text-sm">Total Bill</span>
-          <span className="font-bold text-base">Rs. {178.5}</span>
-        </div>
-        <div>
-          <Button className="h-11">Checkout</Button>
-        </div>
-      </div>
+      {/* total bill navbar  */}
+
+      <NavbarCard billAmount={`Total Bill`} buttonMsg="Checkout" />
     </main>
   );
 };

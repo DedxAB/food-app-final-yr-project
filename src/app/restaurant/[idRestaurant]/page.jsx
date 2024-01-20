@@ -3,7 +3,8 @@ import Image from "next/image";
 import DetailsImg from "../../../../public/assets/details.jpeg";
 import { Heart, MapPin, MoveLeft } from "lucide-react";
 import Link from "next/link";
-import MenuDetailsCard from "@/components/MealDetailsCard/MenuDetailsCard";
+import MenuDetailsCard from "@/components/mealDetailsCard/MenuDetailsCard";
+import NavbarCard from "@/components/navbarCard/NavbarCard";
 
 const DetailsPage = () => {
   return (
@@ -57,17 +58,7 @@ const DetailsPage = () => {
       </div>
 
       {/* Navbar bottom */}
-      <div className="flex items-center justify-between py-2 px-5 rounded bg-white bg-opacity-20 backdrop-filter backdrop-blur-sm fixed max-w-3xl w-full bottom-0 shadow-md">
-        <div className="flex flex-col">
-          <span className="font-bold text-sm">Total Bill</span>
-          <span className="font-bold text-base">Rs. {178.5}</span>
-        </div>
-        <div>
-          <Link href="/cart">
-            <Button className="h-11">Go to Cart</Button>
-          </Link>
-        </div>
-      </div>
+      <NavbarCard billAmount={`Total Bill`} buttonMsg="Go to Cart" />
     </main>
   );
 };
