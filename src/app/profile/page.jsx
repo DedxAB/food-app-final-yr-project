@@ -115,16 +115,15 @@ const ProfilePage = () => {
         </Button>
       </div>
       <div className="flex flex-col items-center p-8 bg-gray-100">
-      <div className="relative rounded-full overflow-hidden border-4 border-red-500">
-
-        <Image
-          className="object-cover"
-          src={"/assets/avatar.jpg"}
-          width={150}
-          height={150}
-          alt="/"
-          priority
-        />
+        <div className="relative rounded-full overflow-hidden border-4 border-red-500">
+          <Image
+            className="object-cover"
+            src={"/assets/avatar.jpg"}
+            width={150}
+            height={150}
+            alt="/"
+            priority
+          />
         </div>
         <p className="mt-4 text-2xl font-bold">Ankit Acharjee</p>
       </div>
@@ -192,106 +191,118 @@ const ProfilePage = () => {
         </p>
 
         {isFormVisible && (
-          <div className="fixed inset-0 flex items-center justify-center backdrop-filter backdrop-blur-sm backdrop-brightness-50 bg-opacity-50 bg-white ">
-            <div
-              ref={formRef}
-              className="bg-white p-8 rounded-lg backdrop-blur-lg shadow-md border border-gray-300 bg-opacity-70"
-            >
-              {/* Address form */}
-              <label className="block mb-4">
-                Name:
-                <input
-                  type="text"
-                  name="name"
-                  value={addressDetails.name}
-                  onChange={handleInputChange}
-                  className="block w-full border rounded-md p-2 bg-opacity-50"
-                />
-              </label>
-              <label className="block mb-4">
-                Number:
-                <input
-                  type="text"
-                  name="number"
-                  value={addressDetails.number}
-                  onChange={handleInputChange}
-                  className="block w-full border rounded-md p-2 bg-opacity-50"
-                />
-              </label>
-              <label className="block mb-4">
-                Street:
-                <input
-                  type="text"
-                  name="street"
-                  value={addressDetails.street}
-                  onChange={handleInputChange}
-                  className="block w-full border rounded-md p-2 bg-opacity-50"
-                />
-              </label>
-              <label className="block mb-4">
-                City:
-                <input
-                  type="text"
-                  name="city"
-                  value={addressDetails.city}
-                  onChange={handleInputChange}
-                  className="block w-full border rounded-md p-2 bg-opacity-50"
-                />
-              </label>
-              <label className="block mb-4">
-                State:
-                <input
-                  type="text"
-                  name="state"
-                  value={addressDetails.state}
-                  onChange={handleInputChange}
-                  className="block w-full border rounded-md p-2 bg-opacity-50"
-                />
-              </label>
-              <label className="block mb-4">
-                Pin:
-                <input
-                  type="text"
-                  name="pin"
-                  value={addressDetails.pin}
-                  onChange={handleInputChange}
-                  className="block w-full border rounded-md p-2 bg-opacity-50"
-                />
-              </label>
-              {/* Save button */}
-              <button
-                onClick={handleSaveAddress}
-                className="bg-red-600 text-white px-4 py-2 rounded-md backdrop-blur-lg"
+          <form>
+            <div className="fixed inset-0 flex items-center justify-center backdrop-filter backdrop-blur-sm backdrop-brightness-50 bg-opacity-50 bg-white ">
+              <div
+                ref={formRef}
+                className="bg-white p-8 rounded-lg backdrop-blur-lg shadow-md border border-gray-300 bg-opacity-70"
               >
-                Save Address
-              </button>
+                {/* Address form */}
+                <label className="block mb-4">
+                  Name:
+                  <input
+                    required
+                    type="text"
+                    name="name"
+                    value={addressDetails.name}
+                    onChange={handleInputChange}
+                    className="block w-full border rounded-md p-2 bg-opacity-50"
+                  />
+                </label>
+                <label className="block mb-4">
+                  Number:
+                  <input
+                    required
+                    type="text"
+                    name="number"
+                    value={addressDetails.number}
+                    onChange={handleInputChange}
+                    className="block w-full border rounded-md p-2 bg-opacity-50"
+                  />
+                </label>
+                <label className="block mb-4">
+                  Street:
+                  <input
+                    required
+                    type="text"
+                    name="street"
+                    value={addressDetails.street}
+                    onChange={handleInputChange}
+                    className="block w-full border rounded-md p-2 bg-opacity-50"
+                  />
+                </label>
+                <label className="block mb-4">
+                  City:
+                  <input
+                    required
+                    type="text"
+                    name="city"
+                    value={addressDetails.city}
+                    onChange={handleInputChange}
+                    className="block w-full border rounded-md p-2 bg-opacity-50"
+                  />
+                </label>
+                <label className="block mb-4">
+                  State:
+                  <input
+                    required
+                    type="text"
+                    name="state"
+                    value={addressDetails.state}
+                    onChange={handleInputChange}
+                    className="block w-full border rounded-md p-2 bg-opacity-50"
+                  />
+                </label>
+                <label className="block mb-4">
+                  Pin:
+                  <input
+                    required
+                    type="text"
+                    name="pin"
+                    value={addressDetails.pin}
+                    onChange={handleInputChange}
+                    className="block w-full border rounded-md p-2 bg-opacity-50"
+                  />
+                </label>
+                {/* Save button */}
+                <button
+                  onClick={handleSaveAddress}
+                  className="bg-red-600 text-white px-4 py-2 rounded-md backdrop-blur-lg"
+                >
+                  Save Address
+                </button>
+              </div>
             </div>
-          </div>
+          </form>
         )}
 
         {savedAddresses.map((savedAddress, index) => (
-          <div key={index} className="mt-3 border border-red-500 bg-white rounded-md shadow-lg p-4">
-          <div className="py-3 px-2 text-sm items-center border-b border-red-500">
-            <div className="flex items-center">
-              <MapPin className="text-red-500" />
-              <span className="pl-2 font-bold text-gray-800">{savedAddress.name}</span>
-              <Trash
-                className="ml-auto cursor-pointer text-gray-500 hover:text-red-500"
-                size={20}
-                strokeWidth={1.75}
-                onClick={() => handleDeleteAddress(index)}
-              />
+          <div
+            key={index}
+            className="mt-3 border border-red-500 bg-white rounded-md shadow-lg p-4"
+          >
+            <div className="py-3 px-2 text-sm items-center border-b border-red-500">
+              <div className="flex items-center">
+                <MapPin className="text-red-500" />
+                <span className="pl-2 font-bold text-gray-800">
+                  {savedAddress.name}
+                </span>
+                <Trash
+                  className="ml-auto cursor-pointer text-gray-500 hover:text-red-500"
+                  size={20}
+                  strokeWidth={1.75}
+                  onClick={() => handleDeleteAddress(index)}
+                />
+              </div>
+            </div>
+            <div className="text-sm px-3 py-1 text-gray-500">
+              {savedAddress.street}, {savedAddress.city}, {savedAddress.state},{" "}
+              {savedAddress.pin}
+            </div>
+            <div className="text-sm px-3 py-2 text-gray-500">
+              {savedAddress.number}
             </div>
           </div>
-          <div className="text-sm px-3 py-1 text-gray-500">
-            {savedAddress.street}, {savedAddress.city}, {savedAddress.state}, {savedAddress.pin}
-          </div>
-          <div className="text-sm px-3 py-2 text-gray-500">
-            {savedAddress.number}
-          </div>
-        </div>
-        
-        
         ))}
       </div>
     </>
