@@ -73,8 +73,8 @@ const page = () => {
                                     </SheetHeader>
                                     <div className='flex justify-center items-center py-20 m-5'>
                                         <Button className='px-6 py-6'>
-                                        <Settings size={19} /><span className='pl-2'>Log Out</span>
-                                            </Button>
+                                           <Settings size={19} /><span className='pl-2'>Log Out</span>
+                                        </Button>
                                     </div>
                                 </SheetContent>
                             </Sheet>

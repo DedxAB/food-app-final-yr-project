@@ -10,11 +10,16 @@ import {
 import { Input } from "@/components/ui/input";
 import { LogIn } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import LogoImg from "../../../public/assets/logo.png"
+
 
 const LoginPage = () => {
   return (
     <>
-      <div className="h-screen flex mx-auto justify-center items-center">
+      <div className="h-screen flex mx-auto justify-center items-center flex-col">
+       <Image width={132}  src={LogoImg} alt="logo-photo" priority />
+
         <Card className="w-80">
           <CardHeader>
             <CardTitle className="text-xl">Log in</CardTitle>

@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import LogoImg from "../../../public/assets/logo.png"
 import {
   Card,
   CardContent,
@@ -14,8 +16,9 @@ import React from "react";
 
 const SignUp = () => {
   return (
-      <div className="h-screen flex mx-auto justify-center items-center">
+      <div className="h-screen flex mx-auto justify-center items-center flex-col">
         {/* <Image src={`https://api.api-ninjas.com/v1/randomimage?category=food`} alt="food-image" width={200} height={200}></Image> */}
+        <Image width={132}  src={LogoImg} alt="logo-photo" priority />
       <Card className="w-80">
         <CardHeader>
           <CardTitle className="text-xl">Sign up</CardTitle>
