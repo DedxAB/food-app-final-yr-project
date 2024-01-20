@@ -114,19 +114,23 @@ const ProfilePage = () => {
           <Heart className="w-4" />
         </Button>
       </div>
-      <div className="flex flex-col items-center p-4">
+      <div className="flex flex-col items-center p-8 bg-gray-100">
+      <div className="relative rounded-full overflow-hidden border-4 border-red-500">
+
         <Image
-          className="m-2 rounded-full border-2 border-red-500 "
+          className="object-cover"
           src={"/assets/avatar.jpg"}
-          width={120}
-          height={120}
+          width={150}
+          height={150}
           alt="/"
+          priority
         />
-        <p className="font-bold p-2 font-serif">Ankit Acharjee</p>
+        </div>
+        <p className="mt-4 text-2xl font-bold">Ankit Acharjee</p>
       </div>
-      <form>
-        <div className="p-5">
-          <p className="flex justify-between font-bold">
+      <form className="bg-white py-4 rounded-md shadow-lg">
+        <div className="p-5 mb-5">
+          <p className="flex justify-between font-bold ">
             {" "}
             <span>Personal Information</span>
             <Button
@@ -138,7 +142,7 @@ const ProfilePage = () => {
               {text}
             </Button>
           </p>
-          <div className="mt-2 border-2 rounded-xl ">
+          <div className="mt-3 border-2 rounded-xl  ">
             <div className="flex py-3 px-2 border-b-2 text-sm items-center">
               <MailCheck />
               <span className="pl-2">Email</span>
@@ -173,7 +177,7 @@ const ProfilePage = () => {
           </div>
         </div>
       </form>
-      <div className="p-5">
+      <div className="bg-white p-8 mt-8 rounded-md shadow-lg">
         <p className="flex justify-between font-bold">
           {" "}
           <span>Addresses</span>
@@ -188,7 +192,7 @@ const ProfilePage = () => {
         </p>
 
         {isFormVisible && (
-          <div className="fixed inset-0 flex items-center justify-center backdrop-filter backdrop-blur-lg bg-opacity-50 bg-white bg-opacity-10">
+          <div className="fixed inset-0 flex items-center justify-center backdrop-filter backdrop-blur-sm backdrop-brightness-50 bg-opacity-50 bg-white ">
             <div
               ref={formRef}
               className="bg-white p-8 rounded-lg backdrop-blur-lg shadow-md border border-gray-300 bg-opacity-70"
@@ -266,7 +270,7 @@ const ProfilePage = () => {
         )}
 
         {savedAddresses.map((savedAddress, index) => (
-          <div key={index} className="mt-2 border border-red-500 bg-white rounded-md shadow-lg p-4">
+          <div key={index} className="mt-3 border border-red-500 bg-white rounded-md shadow-lg p-4">
           <div className="py-3 px-2 text-sm items-center border-b border-red-500">
             <div className="flex items-center">
               <MapPin className="text-red-500" />
