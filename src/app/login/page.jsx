@@ -32,14 +32,14 @@ const LoginPage = () => {
                   <Input id="name" placeholder="Email" />
                 </div>
                 <div className="flex flex-col space-y-1.5">
-                  <Input id="password" placeholder="Password" />
+                  <Input id="password" placeholder="Password" type="password" />
                 </div>
               </div>
             </form>
           </CardContent>
           <CardFooter className="flex justify-between">
             <Button>
-              <LogIn className="w-[0.88rem] mr-2"/>
+              <LogIn className="w-[0.88rem] mr-2" />
               Log in
             </Button>
           </CardFooter>
