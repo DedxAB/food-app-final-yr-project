@@ -110,9 +110,10 @@ const ProfilePage = () => {
         <div className="text-center text-xl font-bold flex items-center gap-2">
           <span>Your Profile</span>
         </div>
-        <Button size="icon">
+        <div className="w-9"></div>
+        {/* <Button size="icon">
           <Heart className="w-4" />
-        </Button>
+        </Button> */}
       </div>
       <div className="flex flex-col items-center p-8 bg-gray-100">
         <div className="relative rounded-full overflow-hidden border-4 border-red-500">
