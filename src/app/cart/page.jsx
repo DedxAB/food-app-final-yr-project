@@ -8,7 +8,7 @@ const CartPage = () => {
   return (
     <main className="relative">
       {/* header  */}
-      <div className="flex items-center justify-between p-5 border-b-2 bg-white">
+      <div className="flex items-center justify-between p-5 shadow rounded bg-white">
         <Link href="/restaurant/23">
           <Button variant="outline" className="rounded-full" size="icon">
             <MoveLeft className="w-5" />
@@ -24,8 +24,7 @@ const CartPage = () => {
       </div>
 
       {/* card container  */}
-      <div className="px-5 pb-1 mb-5 shadow-md">
-        <CartDishCard />
+      <div className="px-5 pb-1 my-5 shadow-md rounded">
         <CartDishCard />
         <CartDishCard />
         <CartDishCard />
@@ -51,7 +50,6 @@ const CartPage = () => {
       </div>
 
       {/* total bill navbar  */}
-
       <NavbarCard billAmount={`Total Bill`} buttonMsg="Checkout" />
     </main>
   );
