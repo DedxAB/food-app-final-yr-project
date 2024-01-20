@@ -38,9 +38,9 @@ const page = () => {
                         <div >
                             <Sheet>
                                 <SheetTrigger><User color="#ffffff" strokeWidth={1.75} /></SheetTrigger>
-                                <SheetContent className="bg-slate-100 ">
+                                <SheetContent className="bg-white">
                                     <SheetHeader className=''>
-                                        <SheetTitle>Hi ,<span className='font-bold px-2 text-base'>Arnab</span></SheetTitle>
+                                        <SheetTitle>Hi ,<span className='font-bold px-2 font-serif text-base'>Arnab</span></SheetTitle>
                                         <SheetDescription>
                                             <div className='flex items-start flex-col justify-normal pt-16 gap-9 mx-5'>
                                                 <Link href="#" className='flex '>
