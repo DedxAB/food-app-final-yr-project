@@ -35,18 +35,6 @@ const CartDishCard = () => {
     setCount(count - 1);
   };
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState('nothing');
-
-  const handleClickOutside = (event) => {
-      if (event.target.id !== 'subscription-button') {
-          setIsOpen(false);
-          setSelectedPlan('nothing');
-      }
-  };
-
-  console.log(isOpen);
-  console.log(selectedPlan);
   return (
     <>
       <div className="flex flex-col my-5 gap-2">
@@ -74,9 +62,7 @@ const CartDishCard = () => {
                 {/* descripton  */}
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button variant="outline">
-                      Menu
-                    </Button>
+                    <Button variant="outline">Menu</Button>
                   </DialogTrigger>
                   <DialogContent>
                     <DialogHeader>
@@ -99,53 +85,34 @@ const CartDishCard = () => {
           </div>
         </div>
         <div className="flex items-center justify-between">
-          <div className="flex items-center justify-between gap-2">
+          <div className="flex items-center justify-start gap-2">
             {/* subcription  */}
-            <div onClick={handleClickOutside}>
-              <Select className="pr-2">
-                <SelectTrigger className="w-[120px]">
-                  <SelectValue placeholder="Subscribe" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem
-                    value="unsubscribe"
-                    onClick={() => setSelectedPlan("nothing")}
-                  >
-                    Unsubscribe
-                  </SelectItem>
-                  <SelectItem
-                    value="monthly"
-                    onClick={() => setSelectedPlan("monthly")}
-                  >
-                    Monthly
-                  </SelectItem>
-                  <SelectItem
-                    value="weekly"
-                    onClick={() => setSelectedPlan("weekly")}
-                  >
-                    Weekly
-                  </SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
+            <Select className="pr-2">
+              <SelectTrigger className="w-[40%]">
+                <SelectValue placeholder="Subscribe" />
+              </SelectTrigger>
+              <SelectContent>
+                {/* <SelectItem>Unsubscribe</SelectItem> */}
+                <SelectItem>Monthly</SelectItem>
+                <SelectItem>Weekly</SelectItem>
+              </SelectContent>
+            </Select>
             {/* <Subscription i Button /> */}
-            <div >
-              <Dialog className="mr-10 ml-1 pt-2">
-                <DialogTrigger>
-                  {/* See more */}
-                  <AlertCircle />
-                </DialogTrigger>
-                <DialogContent>
-                  <DialogHeader>
-                    <DialogTitle>What is subscription?</DialogTitle>
-                    <DialogDescription>
-                      Subscription is a recurring order. You can choose to
-                      receive your order weekly or monthly.
-                    </DialogDescription>
-                  </DialogHeader>
-                </DialogContent>
-              </Dialog>
-            </div>
+            <Dialog className="mr-10 ml-1 pt-2">
+              <DialogTrigger>
+                {/* See more */}
+                <AlertCircle />
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>What is subscription?</DialogTitle>
+                  <DialogDescription>
+                    Subscription is a recurring order. You can choose to receive
+                    your order weekly or monthly.
+                  </DialogDescription>
+                </DialogHeader>
+              </DialogContent>
+            </Dialog>
           </div>
           {/* + Add - Remove */}
           <div>
