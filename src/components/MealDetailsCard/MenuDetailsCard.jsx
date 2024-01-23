@@ -92,7 +92,7 @@ const MenuDetailsCard = () => {
                 <SelectValue placeholder="Subscribe" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="nothing">Nothing</SelectItem>
+                {/* <SelectItem value="nothing">Nothing</SelectItem> */}
                 <SelectItem value="monthly">Monthly</SelectItem>
                 <SelectItem value="weekly">Weekly</SelectItem>
               </SelectContent>
