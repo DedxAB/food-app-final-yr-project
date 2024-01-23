@@ -31,7 +31,7 @@ const DetailsPage = () => {
       </div>
 
       {/* resturant details  */}
-      <div className="w-[78%] mx-auto min-h-0 bg-white bg-opacity-70 backdrop-filter backdrop-blur-sm shadow-md rounded-lg py-8 mt-14 border-2 border-white">
+      <div className="w-[78%] mx-auto min-h-0 bg-white bg-opacity-70 backdrop-filter backdrop-blur-sm shadow-md rounded-lg py-5 mt-14 border-2 border-white">
         <div className="flex gap-1 justify-center items-center flex-col">
           <h1 className="text-xl font-bold">Delics Fruit Salad</h1>
           <p className="text-gray-500 text-lg">Jaya katwang no 4, Nagasem</p>
