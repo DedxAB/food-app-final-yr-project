@@ -21,6 +21,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import SubscriptionButton from "../subscriptionBtn/SubscriptionButton";
 
 const CartDishCard = () => {
   const [count, setCount] = useState(0);
@@ -33,6 +34,19 @@ const CartDishCard = () => {
     if (count < 1) return setCount(0);
     setCount(count - 1);
   };
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState('nothing');
+
+  const handleClickOutside = (event) => {
+      if (event.target.id !== 'subscription-button') {
+          setIsOpen(false);
+          setSelectedPlan('nothing');
+      }
+  };
+
+  console.log(isOpen);
+  console.log(selectedPlan);
   return (
     <>
       <div className="flex flex-col my-5 gap-2">
@@ -56,11 +70,11 @@ const CartDishCard = () => {
                 {/* Price  */}
                 <p className="text-base font-bold">Rs.78.00</p>
               </div>
-              <div>
+              <div className="mt-1 w-[64%]">
                 {/* descripton  */}
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button variant="outline" className="mt-1">
+                    <Button variant="outline">
                       Menu
                     </Button>
                   </DialogTrigger>
@@ -87,18 +101,36 @@ const CartDishCard = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center justify-between gap-2">
             {/* subcription  */}
-            <Select className="pr-2">
-              <SelectTrigger className="w-[120px]">
-                <SelectValue placeholder="Subscribe" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="nothing">Nothing</SelectItem>
-                <SelectItem value="monthly">Monthly</SelectItem>
-                <SelectItem value="weekly">Weekly</SelectItem>
-              </SelectContent>
-            </Select>
-            <div className="mr-10 ml-1 pt-2">
-              <Dialog>
+            <div onClick={handleClickOutside}>
+              <Select className="pr-2">
+                <SelectTrigger className="w-[120px]">
+                  <SelectValue placeholder="Subscribe" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem
+                    value="unsubscribe"
+                    onClick={() => setSelectedPlan("nothing")}
+                  >
+                    Unsubscribe
+                  </SelectItem>
+                  <SelectItem
+                    value="monthly"
+                    onClick={() => setSelectedPlan("monthly")}
+                  >
+                    Monthly
+                  </SelectItem>
+                  <SelectItem
+                    value="weekly"
+                    onClick={() => setSelectedPlan("weekly")}
+                  >
+                    Weekly
+                  </SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            {/* <Subscription i Button /> */}
+            <div >
+              <Dialog className="mr-10 ml-1 pt-2">
                 <DialogTrigger>
                   {/* See more */}
                   <AlertCircle />
@@ -115,8 +147,8 @@ const CartDishCard = () => {
               </Dialog>
             </div>
           </div>
+          {/* + Add - Remove */}
           <div>
-            {/* + Add - Remove */}
             <div className="flex items-center justify-center text-base">
               <Button variant="outline" size="icon" onClick={handleCountMinus}>
                 <Minus className="w-4" />
