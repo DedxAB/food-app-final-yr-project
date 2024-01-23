@@ -1,8 +1,7 @@
-'use client';
 import CartDishCard from "@/components/cartDishCard/CartDishCard";
 import NavbarCard from "@/components/navbarCard/NavbarCard";
 import { Button } from "@/components/ui/button";
-import { Clock4, Heart, Home, ShoppingBag } from "lucide-react";
+import { Clock4, Heart, MoveLeft, ShoppingBag } from "lucide-react";
 import Link from "next/link";
 
 const CartPage = () => {
@@ -10,10 +9,9 @@ const CartPage = () => {
     <main className="relative">
       {/* header  */}
       <div className="flex items-center justify-between p-5 shadow rounded bg-white">
-        <Link href="/">
+        <Link href="/restaurant/23">
           <Button variant="outline" className="rounded-full" size="icon">
-            {/* <MoveLeft /> */}
-            <Home className="w-5" />
+            <MoveLeft className="w-5" />
           </Button>
         </Link>
         <div className="text-center text-xl font-bold flex items-center gap-2">
