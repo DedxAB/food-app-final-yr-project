@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Logo from "../../../public/assets/Logo.png";
 import {
   Card,
   CardContent,
@@ -9,15 +10,18 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { LogIn } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const SignUp = () => {
   return (
     <div className="h-screen flex mx-auto justify-center items-center">
-      {/* <Image src={`https://api.api-ninjas.com/v1/randomimage?category=food`} alt="food-image" width={200} height={200}></Image> */}
-      <Card className="w-80">
-        <CardHeader>
+      <Card className="w-80 border-2 border-gray-100 shadow relative">
+        <div className="w-[13rem] z-10 absolute left-1/2 transform -translate-x-1/2 bottom-[14.5rem]">
+          <Image src={Logo} alt="logo" priority />
+        </div>
+        <CardHeader className="mt-[3.75rem]">
           <CardTitle className="text-xl">Sign up</CardTitle>
           <CardDescription>
             Have an account?
