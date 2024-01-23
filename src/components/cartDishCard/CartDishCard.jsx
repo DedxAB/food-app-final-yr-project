@@ -21,7 +21,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import SubscriptionButton from "../subscriptionBtn/SubscriptionButton";
 
 const CartDishCard = () => {
   const [count, setCount] = useState(0);
@@ -34,7 +33,6 @@ const CartDishCard = () => {
     if (count < 1) return setCount(0);
     setCount(count - 1);
   };
-
   return (
     <>
       <div className="flex flex-col my-5 gap-2">
@@ -58,11 +56,13 @@ const CartDishCard = () => {
                 {/* Price  */}
                 <p className="text-base font-bold">Rs.78.00</p>
               </div>
-              <div className="mt-1 w-[64%]">
+              <div>
                 {/* descripton  */}
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button variant="outline">Menu</Button>
+                    <Button variant="outline" className="mt-1">
+                      Menu
+                    </Button>
                   </DialogTrigger>
                   <DialogContent>
                     <DialogHeader>
@@ -85,37 +85,37 @@ const CartDishCard = () => {
           </div>
         </div>
         <div className="flex items-center justify-between">
-          <div className="flex items-center justify-start gap-2">
+          <div className="flex items-center justify-between gap-2">
             {/* subcription  */}
             <Select className="pr-2">
-              <SelectTrigger className="w-[40%]">
+              <SelectTrigger className="w-[120px]">
                 <SelectValue placeholder="Subscribe" />
               </SelectTrigger>
               <SelectContent>
-                {/* <SelectItem>Unsubscribe</SelectItem> */}
-                <SelectItem>Monthly</SelectItem>
-                <SelectItem>Weekly</SelectItem>
+                <SelectItem value="nothing">Nothing</SelectItem>
+                <SelectItem value="monthly">Monthly</SelectItem>
+                <SelectItem value="weekly">Weekly</SelectItem>
               </SelectContent>
             </Select>
-            {/* <Subscription i Button /> */}
-            <Dialog className="mr-10 ml-1 pt-2">
-              <DialogTrigger>
-                {/* See more */}
-                <AlertCircle />
-              </DialogTrigger>
-              <DialogContent>
-                <DialogHeader>
-                  <DialogTitle>What is subscription?</DialogTitle>
-                  <DialogDescription>
-                    Subscription is a recurring order. You can choose to receive
-                    your order weekly or monthly.
-                  </DialogDescription>
-                </DialogHeader>
-              </DialogContent>
-            </Dialog>
+            <div className="mr-10 ml-1 pt-2">
+              <Dialog>
+                <DialogTrigger>
+                  <AlertCircle />
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>What is subscription?</DialogTitle>
+                    <DialogDescription>
+                      Subscription is a recurring order. You can choose to
+                      receive your order weekly or monthly.
+                    </DialogDescription>
+                  </DialogHeader>
+                </DialogContent>
+              </Dialog>
+            </div>
           </div>
-          {/* + Add - Remove */}
           <div>
+            {/* + Add - Remove */}
             <div className="flex items-center justify-center text-base">
               <Button variant="outline" size="icon" onClick={handleCountMinus}>
                 <Minus className="w-4" />
