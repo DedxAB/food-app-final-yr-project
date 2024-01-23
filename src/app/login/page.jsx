@@ -17,11 +17,11 @@ const LoginPage = () => {
   return (
     <>
       <div className="h-screen flex flex-col mx-auto justify-center items-center">
-        <div className="w-[54%]">
-          <Image src={Logo} alt="logo" priority/>
-        </div>
-        <Card className="w-80">
-          <CardHeader>
+        <Card className="w-80 border-2 border-gray-100 shadow relative">
+          <div className="w-[13rem] z-10 absolute left-1/2 transform -translate-x-1/2 bottom-[14.5rem]">
+            <Image src={Logo} alt="logo" priority />
+          </div>
+          <CardHeader className="mt-[3.75rem]">
             <CardTitle className="text-xl">Log in</CardTitle>
             <CardDescription>
               Don&apos;t have an account?
@@ -34,10 +34,15 @@ const LoginPage = () => {
             <form>
               <div className="grid w-full items-center gap-4">
                 <div className="flex flex-col space-y-1.5">
-                  <Input id="name" placeholder="Email"  />
+                  <Input id="name" placeholder="Email" />
                 </div>
                 <div className="flex flex-col space-y-1.5">
-                  <Input id="password" placeholder="Password" type="password" autoComplete="on"/>
+                  <Input
+                    id="password"
+                    placeholder="Password"
+                    type="password"
+                    autoComplete="on"
+                  />
                 </div>
               </div>
             </form>
