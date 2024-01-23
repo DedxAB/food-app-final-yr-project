@@ -9,12 +9,17 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { LogIn } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import Logo from "../../../public/assets/Logo.png";
 
 const LoginPage = () => {
   return (
     <>
-      <div className="h-screen flex mx-auto justify-center items-center">
+      <div className="h-screen flex flex-col mx-auto justify-center items-center">
+        <div className="w-[54%]">
+          <Image src={Logo} alt="logo" priority/>
+        </div>
         <Card className="w-80">
           <CardHeader>
             <CardTitle className="text-xl">Log in</CardTitle>
@@ -29,10 +34,10 @@ const LoginPage = () => {
             <form>
               <div className="grid w-full items-center gap-4">
                 <div className="flex flex-col space-y-1.5">
-                  <Input id="name" placeholder="Email" />
+                  <Input id="name" placeholder="Email"  />
                 </div>
                 <div className="flex flex-col space-y-1.5">
-                  <Input id="password" placeholder="Password" type="password" />
+                  <Input id="password" placeholder="Password" type="password" autoComplete="on"/>
                 </div>
               </div>
             </form>
