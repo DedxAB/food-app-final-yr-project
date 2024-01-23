@@ -100,7 +100,6 @@ const CartDishCard = () => {
             <div className="mr-10 ml-1 pt-2">
               <Dialog>
                 <DialogTrigger>
-                  {/* See more */}
                   <AlertCircle />
                 </DialogTrigger>
                 <DialogContent>
