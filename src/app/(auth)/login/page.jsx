@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input";
 import { LogIn } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../../public/assets/Logo.png";
+import Logo from "../../../../public/assets/Logo.png";
 
 const LoginPage = () => {
   return (
@@ -25,8 +25,8 @@ const LoginPage = () => {
             <CardTitle className="text-xl">Log in</CardTitle>
             <CardDescription>
               Don&apos;t have an account?
-              <Link href="/signup" className="ml-1 font-semibold text-black">
-                Sign up
+              <Link href="/register" className="ml-1 font-semibold text-black">
+                Register
               </Link>
             </CardDescription>
           </CardHeader>

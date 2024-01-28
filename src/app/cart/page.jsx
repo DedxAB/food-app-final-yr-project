@@ -29,8 +29,6 @@ const CartPage = () => {
       <div className="px-5 pb-1 my-5 shadow-md rounded">
         <CartDishCard />
         <CartDishCard />
-        <CartDishCard />
-        <CartDishCard />
       </div>
 
       {/* cart user details  */}

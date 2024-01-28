@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import Logo from "../../../public/assets/Logo.png";
+import Logo from "../../../../public/assets/Logo.png";
 import {
   Card,
   CardContent,
@@ -12,9 +12,8 @@ import { Input } from "@/components/ui/input";
 import { LogIn } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
-const SignUp = () => {
+const Register = () => {
   return (
     <div className="h-screen flex mx-auto justify-center items-center">
       <Card className="w-80 border-2 border-gray-100 shadow relative">
@@ -22,7 +21,7 @@ const SignUp = () => {
           <Image src={Logo} alt="logo" priority />
         </div>
         <CardHeader className="mt-[3.75rem]">
-          <CardTitle className="text-xl">Sign up</CardTitle>
+          <CardTitle className="text-xl">Register</CardTitle>
           <CardDescription>
             Have an account?
             <Link href="/login" className="ml-1 font-semibold text-black">
@@ -53,4 +52,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Register;
