@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import CartDishCard from "@/components/cartDishCard/CartDishCard";
 import NavbarCard from "@/components/navbarCard/NavbarCard";
 import { Button } from "@/components/ui/button";
@@ -12,7 +12,6 @@ const CartPage = () => {
       <div className="flex items-center justify-between p-5 shadow rounded bg-white">
         <Link href="/">
           <Button variant="outline" className="rounded-full" size="icon">
-            {/* <MoveLeft /> */}
             <Home className="w-5" />
           </Button>
         </Link>
@@ -26,9 +25,23 @@ const CartPage = () => {
       </div>
 
       {/* card container  */}
-      <div className="px-5 pb-1 my-5 shadow-md rounded">
+      <div className={`px-5 pb-1 my-5 shadow-md rounded`}>
         <CartDishCard />
         <CartDishCard />
+      </div>
+
+      {/* add more items  */}
+      <div
+        className={`px-5 pb-1 my-5 shadow-md rounded flex justify-between items-center`}
+      >
+        <div>
+          <p>Want's to add more items?</p>
+        </div>
+        <div>
+          <Link href={`/restaurant/123`}>
+            <Button>Add</Button>
+          </Link>
+        </div>
       </div>
 
       {/* cart user details  */}
